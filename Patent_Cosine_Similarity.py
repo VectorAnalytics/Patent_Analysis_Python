@@ -25,7 +25,7 @@ for row in csv_f:
     Abstracts_2011.append(row[0])    	
 Abstracts_str_2011=' '.join(Abstracts_2011)
 
-#Clean and return stopwords from 2011 abstracts          
+#Clean and remove stopwords from 2011 abstracts          
 alpha_only_2011 = re.sub("[^a-zA-Z]", " ", Abstracts_str_2011)  
 words_2011 = alpha_only_2011.lower().split()
 #Was testing stopword removal with counter   
@@ -47,7 +47,7 @@ for row in csv_g:
     Abstracts_2012.append(row[0])    	
 Abstracts_str_2012=' '.join(Abstracts_2012)
 
-#Clean and return stopwords from 2012 abstracts          
+#Clean and remove stopwords from 2012 abstracts          
 alpha_only_2012 = re.sub("[^a-zA-Z]", " ", Abstracts_str_2012)  
 words_2012 = alpha_only_2012.lower().split()
 #Was testing stopword removal with counter   
@@ -62,7 +62,7 @@ for row in csv_h:
     Abstracts_2014.append(row[0])    	
 Abstracts_str_2014=' '.join(Abstracts_2014)
 
-#Clean and return stopwords from 2014 abstracts          
+#Clean and remove stopwords from 2014 abstracts          
 alpha_only_2014 = re.sub("[^a-zA-Z]", " ", Abstracts_str_2014)  
 words_2014 = alpha_only_2014.lower().split()
 #Was testing stopword removal with counter   
@@ -77,7 +77,7 @@ for row in csv_j:
     Abstracts_2015.append(row[0])    	
 Abstracts_str_2015=' '.join(Abstracts_2015)
 
-#Clean and return stopwords from 2015 abstracts          
+#Clean and remove stopwords from 2015 abstracts          
 alpha_only_2015 = re.sub("[^a-zA-Z]", " ", Abstracts_str_2015)  
 words_2015 = alpha_only_2015.lower().split()
 #Was testing stopword removal with counter   
