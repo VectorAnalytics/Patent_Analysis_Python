@@ -3,7 +3,7 @@
 import csv
 import re
 from collections import Counter
-#from nltk.stem import WordNetLemmatizer
+from nltk.stem import WordNetLemmatizer
 from nltk import cluster
 from nltk.corpus import stopwords
 #Note: need to download nltk.data before using nltk.corpus and stopwords the first time!
@@ -34,10 +34,8 @@ meaningful_words_2011 = [w for w in words_2011 if not w in stops]
 #Was testing stopword removal with counter     
 #counter2=Counter(meaningful_words)
 
-#Lemmatizer is not working!!!!
-#patent_lemmatizer=WordNetLemmatizer()
-#lemmatized_words = patent_lemmatizer.lemmatize(meaningful_words)
-#counter3=Counter(lemmatized_words)
+patent_lemmatizer=WordNetLemmatizer()
+lemmatized_words_2011 = patent_lemmatizer.lemmatize({(meaningful_words_2011)})
 
 #Read 2012 Abstracts from CSV file    
 g = open('PowerAbstracts_csv_2012.csv')

@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Updated on Sunday April 3 2016
+Updated on Sunday April 5 2016
 @author: Marcia Price
-In Python 2.7 Version
+In Python 3.5 Version
 
 The print lines that are commented out were used for testing and 
 comprehension, ie to understand how the functions worked.
@@ -55,11 +55,11 @@ cos_sim32 = 1-(cluster.util.cosine_distance(vector3,vector2))
 cos_sim34 = 1-(cluster.util.cosine_distance(vector3,vector4))
 
 #Print results to screen
-print
-print "Sentence 1 says: ",sentence1
-print "Sentence 2 says: ",sentence2
-print "Sentence 3 says: ",sentence3
-print "Sentence 4 says: ",sentence4
+print()
+print("Sentence 1 says: ",sentence1)
+print("Sentence 2 says: ",sentence2)
+print("Sentence 3 says: ",sentence3)
+print("Sentence 4 says: ",sentence4)
 
 print('\nCosine Simularity of Sentence 1 and 3 = %4.2f'% cos_sim31)
 angle_in_radians=math.acos(cos_sim31)

@@ -3,7 +3,7 @@
 import csv
 import re
 from collections import Counter
-#from nltk.stem import WordNetLemmatizer
+from nltk.stem import WordNetLemmatizer
 from nltk import cluster
 from nltk.corpus import stopwords
 #Note: need to download nltk.data before using nltk.corpus and stopwords the first time!
@@ -16,7 +16,25 @@ for row in csv_ps:
 xx = stopwords.words("english") 
 xx.extend(patent_stopwords)
 stops = set(xx) 
-    
+  
+wordnet_tag ={'NN':'n','JJ':'a','VB':'v','RB':'r','VBN':'v','VBD':'v',
+    'VBG':'v','VBZ':'v','NNS':'n','VBP':'v','CD':'n','IN':'n','MD':'n',
+    'JJR':'a','JJS':'a','DT':'n','RBR':'r','PRP':'n','CC':'n','WRB':'n',
+    'PRP$':'n','RP':'r','WP$':'n','PDT':'n','WDT':'n','WP':'n','LS':'n'
+}
+ 
+ 
+# Lemmatizer and POS tagger to fit each word based on its POS
+#require wordnet_tag
+def lemmatize_words_array(words_array):
+    lemmatizer = nltk.stem.WordNetLemmatizer()
+    tagged = nltk.pos_tag(words_array)
+    lemmatized_words_array = [];
+    for word in tagged:
+        lemma = lemmatizer.lemmatize(word[0],wordnet_tag[word[1]])
+        lemmatized_words_array.append(lemma)
+    return lemmatized_words_array
+  
 #Read 2011 Abstracts from CSV file    
 f = open('PowerAbstracts_csv_2011.csv')
 csv_f=csv.reader(f)
@@ -34,10 +52,8 @@ meaningful_words_2011 = [w for w in words_2011 if not w in stops]
 #Was testing stopword removal with counter     
 #counter2=Counter(meaningful_words)
 
-#Lemmatizer is not working!!!!
-#patent_lemmatizer=WordNetLemmatizer()
-#lemmatized_words = patent_lemmatizer.lemmatize(meaningful_words)
-#counter3=Counter(lemmatized_words)
+patent_lemmatizer=WordNetLemmatizer()
+lemmatized_words_2011 = patent_lemmatizer.lemmatize({(meaningful_words_2011)})
 
 #Read 2012 Abstracts from CSV file    
 g = open('PowerAbstracts_csv_2012.csv')
