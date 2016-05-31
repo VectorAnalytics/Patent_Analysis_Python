@@ -46,7 +46,7 @@ stops = set(xx)
 
 #Input string called "Abstract" to test lemmatization.
 
-Abstract='Tests methods method organ organize organizing testing of the blue mast by the Blues master'    
+Abstract='Tests large larger largest methods method organ organize organizing testing of the blue mast by the Blues master'    
 
 #Keep only alpha's in the string.         
 alpha_only = re.sub("[^a-zA-Z]", " ", Abstract) 
