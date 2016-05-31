@@ -7,11 +7,11 @@ import sys
 csv.field_size_limit(sys.maxsize)
 
 #Opening the file I write to before getting in the "for" loop.
-outfile = open("claims_6500_2015.csv", 'w')
+outfile = open("/Users/mprice79/claims_6500_20155.csv", 'w')
 
 #Debugging errors lead to need for "utf-8" and "ignore" in the open statement.
 #The ignore due to some pats lacking a claim field, I think.
-with open('/Users/Marcia/OneDrive/DSBA_6880/Parsed_Patent_Files/WalidFiles/claims_2015.csv', \
+with open('/Users/mprice79/claims_2015.csv', \
     encoding='utf-8', errors='ignore' ) as claimfile:
     claimlist = csv.reader(claimfile)
     #Skip the header row    
