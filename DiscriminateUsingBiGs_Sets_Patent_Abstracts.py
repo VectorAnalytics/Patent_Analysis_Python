@@ -9,7 +9,6 @@ from nltk import bigrams
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.probability import FreqDist
-from nltk import collocations
 
 lemmatizer=WordNetLemmatizer()
 #Note: need to download nltk.data before using nltk.corpus and stopwords the first time!
