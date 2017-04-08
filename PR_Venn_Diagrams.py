@@ -32,7 +32,7 @@ plt.annotate('Precision = 54%, Recall=61%, F-Score=58%\n(Assigns USPC as the Cor
 
 #Savefig is not working, returns an empty file and/or cuts off title and a bit of right text box.
 #  I saved imaged directly from my console, by right clicking on image.
-savefig('Power2012Venn2.png')
+savefig('Power2012Venn22.png')
 plt.show()
 
 #Venn for 2012 Image Recognition Patents
@@ -57,5 +57,5 @@ plt.title("2012 Image Pattern Recognition Patent Counts\n\n\n")
 plt.annotate('Precision = 18%, Recall=60%, F-Score=27%\n(Assigns USPC as the Correct Set)', xy=v.get_label_by_id('100').get_position() - np.array([-1.0, 0.2]), xytext=(-100,150),
              ha='center', textcoords='offset points', bbox=dict(boxstyle='round,pad=0.5', fc='gray', alpha=0.1))
 
-savefig('Power2012Venn2.png')
+savefig('Pattern2012Venn22.png')
 plt.show()
